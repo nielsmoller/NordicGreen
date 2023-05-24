@@ -1,6 +1,6 @@
-  <?php
-      include_once 'header.php';
-  ?>
+<?php
+    include_once 'header.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -52,8 +52,18 @@
         }
     }
 
-    // Hent produkter fra databasen baseret på kategori-filter
-    $sql = "SELECT * FROM products $categoryFilter";
+    // Hent produkter fra databasen baseret på kategori-filter og søgefilter
+$sql = "SELECT * FROM products $categoryFilter";
+
+// Tjek om der er foretaget en søgning
+if (isset($_GET['search'])) {
+    $searchQuery = $_GET['search'];
+
+    // Tilføj en WHERE-klausul til SQL-forespørgslen for at filtrere baseret på søgning
+    // Brug af LIKE-operator med wildcards (%) til at matche produktnavnet delvist
+    $sql .= " WHERE name LIKE '%$searchQuery%'";
+}
+
     $result = $conn->query($sql);
     ?>
     <div class="sidebar">
