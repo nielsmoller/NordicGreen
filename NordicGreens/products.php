@@ -10,15 +10,6 @@
     <link rel="stylesheet" type="text/css" href="css/products.css">
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.php">Hjem</a></li>
-            <li><a href="products.php">Produkter</a></li>
-            <li><a href="cart.php">Indkøbskurv</a></li>
-        </ul>
-    </nav>
-</header>
 <div class="container">
     <?php
     // Opret forbindelse til databasen
@@ -52,7 +43,7 @@
         }
     }
 
-    // Hent produkter fra databasen baseret på kategori-filter og søgefilter
+// Hent produkter fra databasen baseret på kategori-filter og søgefilter
 $sql = "SELECT * FROM products $categoryFilter";
 
 // Tjek om der er foretaget en søgning
@@ -60,9 +51,10 @@ if (isset($_GET['search'])) {
     $searchQuery = $_GET['search'];
 
     // Tilføj en WHERE-klausul til SQL-forespørgslen for at filtrere baseret på søgning
-    // Brug af LIKE-operator med wildcards (%) til at matche produktnavnet delvist
-    $sql .= " WHERE name LIKE '%$searchQuery%'";
+    // Brug af OR-operatoren for at matche søgeordet i både produktets navn og beskrivelse
+    $sql .= " WHERE name LIKE '%$searchQuery%' OR description LIKE '%$searchQuery%'";
 }
+
 
     $result = $conn->query($sql);
     ?>
