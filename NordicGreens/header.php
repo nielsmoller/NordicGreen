@@ -30,7 +30,7 @@
                 if (isset($_SESSION["usersemail"])) {
                     echo 
                     "<div class='search-container'>
-                        <form action='#'>
+                        <form action='products.php' method='GET'> 
                             <input type='text' placeholder='Søg efter produkter..' name='search'>
                             <button type='submit'><i class='fa-solid fa-magnifying-glass' style='color: #f5f8f2;'></i></button>
                         </form>
