@@ -1,0 +1,121 @@
+/* Product Carousel */
+#product-carousel {
+	width: 100vw;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.carousel-container {
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+	margin: 0;
+	padding: 0;
+}
+
+
+.carousel-item {
+	flex: 0 0 100%;
+	margin: 0;
+	text-align: center;
+}
+
+.carousel-item p {
+	font-size: 30px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.carousel-item img {
+	width: 800px;
+	height: 370px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+
+.carousel-controls {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.carousel-controls button {
+	margin: 0 5px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.view-all-btn {
+	text-align: center;
+}
+
+/* Produktanbefalinger */
+#product-recommendations {
+	background-color: white;
+	width: 100%;
+	height: auto;
+	padding-bottom: 50px;
+}
+
+.product {
+	display: inline-block;
+	text-align: center;
+}
+
+.product img {
+	width: 200px;
+	height: 200px;
+}
+
+.product p {
+	margin-top: 10px;
+}
+
+#product-recommendations a {
+	display: block;
+	text-align: center;
+}
+
+/* Tilføj følgende regel til .product-list */
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	min-height: 650px;
+}
+
+/* Tilføj følgende regel til .product */
+.product {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	align-items: center;
+	text-align: center;
+}
+
+
+/* Tilføj følgende regel til .product img */
+.product img {
+	width: 350px;
+	height: 350px;
+	object-fit: cover;
+}
+
+/* Tilføj følgende regel til .product p */
+.product p {
+	margin: 10px 30px;
+	text-align: start;
+	line-height: 1.5;
+}
