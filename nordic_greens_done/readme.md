@@ -26,23 +26,26 @@ Liste over software der skal bruges til dette projekt:
 
 3. Start server
 
+#### Download af filer til website og database
+1. Download "nordic_greens_done" fra github.com/
+2. Flyt filen fra dine downloads til:
+* Mac: /Applications/MAMP/htdocs
+* Win: \MAMP\htdocs
+
 #### Opsætning af database
-1. Skriv url i browser: localhost:8888/phpmyadmin5
+1. Skriv url i browser:
+* Mac: localhost:8888/phpmyadmin5
+* Win: localhost/phpMyAdmin/ (Case sensitive)
 2. Gå til fanen "Import" i toppen af siden
-3. Tryk på "Vælg fil" og åben filen /htdocs/nordic_greens_done/nordic_greens_db.sql
-4. Scroll til bunden og tryk på "Import"
+3. Tryk på "Vælg fil" og åben filen /htdocs/NordicGreen-main/nordic_greens_done/nordic_greens_db.sql
+4. Scroll til bunden og tryk på "Import" / "Go"
 
 Hvis importen er gennemført korrekt vil du nu kunne se databasen med navnet "nordic_greens" i panelet i venstre side.
 
 
 #### Hvordan vises websiden
-
-1. Download "nordic_greens_done" fra github.com/
-2. Flyt filen fra dine downloads til:
-* Mac: /Applications/MAMP/htdocs
-* Win: \MAMP\htdocs
-3. Åbn browseren og skriv i url: localhost:8888
-4. Vælg filen "nordic_greens_done"
+1. Åbn browseren og skriv i url: localhost:8888
+2. Vælg filen "NordicGreen-main" -> "nordic_greens_done"
 
 ***
 ## Brug af website
